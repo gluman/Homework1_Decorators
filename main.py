@@ -22,7 +22,7 @@ def logger(old_function):
 
         with open(path, 'a') as f:
             f.writelines(log_text)
-        f.close()
+
         return result
 
     return new_function
