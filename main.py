@@ -12,15 +12,17 @@ def logger(old_function):
     def new_function(*args, **kwargs):
 
         result = old_function(*args, **kwargs)
-        log_text =f"name func: {old_function.__name__}, " \
-                  f"date: {datetime.date.today()}, " \
-                  f"time: {datetime.datetime.now().time()}, " \
-                  f"*args, {args}" \
-                  f"**kwargs: {kwargs}" \
-                  f"result: {result}"
+        log_text =f"name func: {old_function.__name__}; " \
+                  f"date: {datetime.date.today()}; " \
+                  f"time: {datetime.datetime.now().time().strftime('%H:%M:%S')}; " \
+                  f"*args: {args}; " \
+                  f"**kwargs: {kwargs}; " \
+                  f"result: {result}; " \
+                  f"\n"
 
         with open(path, 'a') as f:
-            f.write(log_text)
+            f.writelines(log_text)
+        f.close()
         return result
 
     return new_function
