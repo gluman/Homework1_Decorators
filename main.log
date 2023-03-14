@@ -1,0 +1,5 @@
+name func: hello_world; date: 2023-03-14; time: 21:30:28; *args: (); **kwargs: {}; result: Hello World; 
+name func: summator; date: 2023-03-14; time: 21:30:28; *args: (2, 2); **kwargs: {}; result: 4; 
+name func: div; date: 2023-03-14; time: 21:30:28; *args: (6, 2); **kwargs: {}; result: 3.0; 
+name func: summator; date: 2023-03-14; time: 21:30:28; *args: (4.3,); **kwargs: {'b': 2.2}; result: 6.5; 
+name func: summator; date: 2023-03-14; time: 21:30:28; *args: (); **kwargs: {'a': 0, 'b': 0}; result: 0; 
